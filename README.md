@@ -2,5 +2,45 @@ editablediv
 ===========
 
 
-Install with 
+## Install with 
 bower install git://github.com/gillestasse/editablediv
+
+
+## Use
+```
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>	
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<script src="../dist/editablediv.js"></script>
+<link href="../dist/editablediv.css" rel="stylesheet">
+
+
+  </head>
+ <body>
+ </body>
+ <div style="line-height:12px;width:150px" class="editable-textarea"></div>
+
+
+<script type="text/javascript">
+	
+$(document).ready(
+
+	function(){
+
+		var myplung=$(".editable-textarea").editablediv({actions:function(){console.info('lllllllllllll')}})
+		myplung.on('custom',function(evt, myData) {console.info(myData)})
+		//myplung.disable()
+
+	})
+
+</script>
+
+ </html>
+ 
+ ```
