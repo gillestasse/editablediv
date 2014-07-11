@@ -3,7 +3,6 @@
   "version": "0.0.0",
   "homepage": "https://github.com/gillestasse/editablediv",
   "description": "rich editable div",
-  "main": "./dist/",
   "keywords": [
     "jquery"
   ],
