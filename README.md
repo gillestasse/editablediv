@@ -5,6 +5,10 @@ editablediv
 ## Install with 
 bower install git://github.com/gillestasse/editablediv
 
+## Dependencies
+
+Bootstrap3 css for the glyicons
+
 
 ## Use
 ```
