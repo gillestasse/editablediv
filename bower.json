@@ -1,0 +1,21 @@
+{
+  "name": "editablediv",
+  "version": "0.0.0",
+  "homepage": "https://github.com/gillestasse/editablediv",
+  "description": "rich editable div",
+  "main": "dist/editablediv.js",
+  "keywords": [
+    "jquery"
+  ],
+  "authors": [
+    "gilles tasse"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
