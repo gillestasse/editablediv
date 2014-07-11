@@ -2,5 +2,5 @@
   "name": "editablediv",
   "version": "0.0.0",
   "homepage": "https://github.com/gillestasse/editablediv",
-  "main": "./dist/editablediv.js",
+  "license": "MIT"
 }
