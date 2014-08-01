@@ -10,7 +10,7 @@ bower install git://github.com/gillestasse/editablediv
 Bootstrap3 css for the glyicons
 
 
-## Use
+## Use html
 ```
 
 <!DOCTYPE html>
@@ -31,20 +31,28 @@ Bootstrap3 css for the glyicons
  <div style="line-height:12px;width:150px" class="editable-textarea"></div>
 
 
-<script type="text/javascript">
-	
-$(document).ready(
-
-	function(){
-
-		var myplung=$(".editable-textarea").editablediv({actions:function(){console.info('lllllllllllll')}})
-		myplung.on('custom',function(evt, myData) {console.info(myData)})
-		//myplung.disable()
-
-	})
-
-</script>
-
  </html>
- 
+
  ```
+ ## use javascript 
+ 
+ 
+ 
+```
+	
+        var myplung=$('.editable-textarea').editablediv(
+          {val:$(mine).html(),
+            actions:function(){ console.info('lllllllllllll')}
+          })
+        
+        myplung.on('custom',function(evt, myData) {
+          setTimeout(function() {myplung.done_loading()}, 1000);
+        })
+
+
+ ```
+ 
+ Options are : 
+ 
+ val : the value of the div
+ actions , value 
