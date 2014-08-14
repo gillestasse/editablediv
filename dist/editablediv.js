@@ -8,8 +8,8 @@
         <div contenteditable="true" style="border:1px solid #DEDEDE;width:150px" class="editable-div"></div>\
         <span class="glyphicon glyphicon-question-sign" style="top:0"></span></div>\
         <div class="options">\
-        <span class="glyphicon glyphicon-remove closeoptions" style="border-right:1px solid black;padding-right:4px;color: #D9534F; "></span>\
-        <span class="glyphicon glyphicon-ok saveoptions" style="color: #5CB85C; "></span>\
+        <span class="glyphicon glyphicon-remove closeoptions" style="border-right:1px solid black;padding-right:4px;"></span>\
+        <span class="glyphicon glyphicon-ok saveoptions" ></span>\
         </div>'
 
          $(this).html(html)
