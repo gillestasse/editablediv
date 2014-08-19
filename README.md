@@ -39,7 +39,12 @@ Insert in the head
 
  ```
  
+ For inserting the component with :
+ ```
+ var myeditablediv=$('.editable-textarea').editablediv()
+ ```
+ 
  Options are : 
  
- val : the value of the div
- actions , value 
+ val : the value of the div, you are inserting the editable div.
+ actions : extra event triggers when clicking on the validation icon 
