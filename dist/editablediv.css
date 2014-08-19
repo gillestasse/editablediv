@@ -9,17 +9,67 @@
 
 .options{
 	background-color: #E9E9E9;
-	border: 1px solid #DEDEDE;
-	border-bottom-left-radius:4px;
-	border-bottom-right-radius:4px;
-	width:43px;
-	padding:2px;
-	border-top:none;
-	float:right;
+	border: none;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+	width: 32px;
+	padding: 3px;
+	border-top: none;
+	float: right;
 	margin-right: 20px;
-	visibility: hidden
+	display: none;
+	padding-bottom: 0px;
+	padding-top: 0;
 }
 
 div[contenteditable]{
-	padding-top: 3px
+	padding-top: 3px;
+	padding-right: 3px;
+}
+
+.glyphicon-question-sign{
+	top: 0;
+	font-size: 15px;
+	padding: 5px;
+}
+
+.glyphicon{
+	color:#333
+	}
+
+.spinner {
+height:16px;
+width:20px;
+margin:0px auto;
+position:relative;
+-webkit-animation: rotation .6s infinite linear;
+-moz-animation: rotation .6s infinite linear;
+-o-animation: rotation .6s infinite linear;
+animation: rotation .6s infinite linear;
+border-left:3px solid rgba(0,174,239,.15);
+border-right:3px solid rgba(0,174,239,.15);
+border-bottom:3px solid rgba(0,174,239,.15);
+border-top:3px solid rgba(0,174,239,.8);
+border-radius:100%;
+margin-left: 2px
+}
+
+@-webkit-keyframes rotation {
+from {-webkit-transform: rotate(0deg);}
+to {-webkit-transform: rotate(359deg);}
+}
+
+@-moz-keyframes rotation {
+from {-moz-transform: rotate(0deg);}
+to {-moz-transform: rotate(359deg);}
+}
+
+@-o-keyframes rotation {
+from {-o-transform: rotate(0deg);}
+to {-o-transform: rotate(359deg);}
+}
+
+@keyframes rotation {
+from {transform: rotate(0deg);}
+to {transform: rotate(359deg);}
 }
