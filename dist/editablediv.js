@@ -33,9 +33,10 @@
 
          $(element).find('.saveoptions').on('click',function(){
             $(element).find('.options').css('display','none')
-            $(element).find('.glyphicon').removeClass("glyphicon-pencil")
-            $(element).find('.glyphicon').addClass("glyphicon-remove-circle")
-            $(element).find('.glyphicon-remove-circle').css("color","#D9534F")
+            $(element).find('.glyphicon').removeClass("glyphicon-question-sign")
+            $(element).find('.glyphicon').addClass("spinner")
+
+            
             element._input.trigger('saving', {value:element._input.html()} );
 
             if(options.actions){options.actions()}
@@ -47,10 +48,9 @@
          }
 
          this.done_loading=function(){
-//            console.info('done done_loading',element)
-            $(element).find('.glyphicon').removeClass("glyphicon-remove-circle")
-            $(element).find('.glyphicon').addClass("glyphicon-pencil")
-            $(element).find('.glyphicon').css("color","#333")            
+            $(element).find('.glyphicon').removeClass("spinner")
+            $(element).find('.glyphicon').addClass("glyphicon-question-sign")
+                        
          }
 
          function getinput(){
