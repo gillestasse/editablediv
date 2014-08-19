@@ -23,7 +23,7 @@ Insert in the head
 <link href="../dist/editablediv.css" rel="stylesheet">
 
  ```
- ## use javascript 
+## use javascript 
  
 ```
 	
