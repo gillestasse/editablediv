@@ -19,6 +19,7 @@
         setTimeout(function() {
             $(element).find('div[contenteditable]').html(options.val)
             $(this).find('div[contenteditable]').css('border','1px solid #dedede')
+             $(this).find('.glyphicon-pencil').hide()
         }, 10);
 
         var element=this
