@@ -2,12 +2,13 @@
 
     $.fn.editablediv = function(options) {
 
+
         html='<div style="width:128px;display:inline-flex">\
         <div contenteditable="true" style="border:1px solid #DEDEDE;width:150px" class="editable-div"></div>\
         <span class="glyphicon glyphicon-pencil" style="top:0" id="editicon"></span></div>\
         <div class="options">\
-       <button><span class="glyphicon glyphicon-remove closeoptions"></span></button>\
-        <button><span class="glyphicon glyphicon-ok saveoptions" ></span></button>\
+           <div class="closeoptions thebutton"><span class="glyphicon glyphicon-remove"></span></div>\
+            <div class="saveoptions thebutton"><span class="glyphicon glyphicon-ok" ></span></div>\
         </div>'
 
         if(options.html){
@@ -42,6 +43,7 @@
         })
 
         $('.closeoptions').on('click',function(){
+            console.info('kkkkkk')
             element._input.html(old_value)
             $(element).find('.options').css('display','none')
         })
@@ -55,10 +57,14 @@
             });
 
             setTimeout(function() {
-                $(element).find('.options').css('display','none')
-                $('body').off('click')
-            }, 100);
+
+               $('body').off('click')
+                $(element).find('.options').css('display','block')
+
+            }, 10);
         })
+
+        $(element).find('.saveoptions').show()
 
 
          $(element).find('.saveoptions').on('click',function(){

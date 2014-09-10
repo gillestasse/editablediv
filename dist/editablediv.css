@@ -12,7 +12,7 @@
 	border: 1px solid #CCC;
 	border-bottom-left-radius: 4px;
 	border-bottom-right-radius: 4px;
-	width: 72px;
+	width: 58px;
 	padding: 3px;
 	border-top: none;
 	float: right;
@@ -21,6 +21,7 @@
 	padding-bottom: 3px;
 	padding-top: 3px;
 	box-shadow: 0 3px 6px rgba(111, 111, 111, 0.2);
+
 }
 
 div[contenteditable]{
@@ -31,7 +32,7 @@ div[contenteditable]{
 
 .glyphicon-question-sign{
 	top: 0;
-	font-size: 15px;
+	font-size: 15px;	
 	padding: 5px;
 }
 
@@ -40,20 +41,20 @@ div[contenteditable]{
 	}
 
 .spinner {
-height:16px;
-width:20px;
-margin:0px auto;
-position:relative;
--webkit-animation: rotation .6s infinite linear;
--moz-animation: rotation .6s infinite linear;
--o-animation: rotation .6s infinite linear;
-animation: rotation .6s infinite linear;
-border-left:3px solid rgba(0,174,239,.15);
-border-right:3px solid rgba(0,174,239,.15);
-border-bottom:3px solid rgba(0,174,239,.15);
-border-top:3px solid rgba(0,174,239,.8);
-border-radius:100%;
-margin-left: 2px
+	height:16px;
+	width:20px;
+	margin:0px auto;
+	position:relative;
+	-webkit-animation: rotation .6s infinite linear;
+	-moz-animation: rotation .6s infinite linear;
+	-o-animation: rotation .6s infinite linear;
+	animation: rotation .6s infinite linear;
+	border-left:3px solid rgba(0,174,239,.15);
+	border-right:3px solid rgba(0,174,239,.15);
+	border-bottom:3px solid rgba(0,174,239,.15);
+	border-top:3px solid rgba(0,174,239,.8);
+	border-radius:100%;
+	margin-left: 2px
 }
 
 @-webkit-keyframes rotation {
@@ -78,7 +79,38 @@ to {transform: rotate(359deg);}
 
 #editicon{
 	background-color: #F0F0F0;
-	width: 20px;
+	width: 27px;
 	height: 20px;
 	padding: 2px;
+	border: 1px solid #CCC;
+	border-left:none;
+	border-bottom:none;
 }
+
+.thebutton{
+	background: #F2F2F2;
+	background: -webkit-linear-gradient(top,#FFF 0,#F2F2F2 100%);
+	background: -moz-linear-gradient(top,#fff 0,#f2f2f2 100%);
+	background: -ms-linear-gradient(top,#fff 0,#f2f2f2 100%);
+	background: -o-linear-gradient(top,#fff 0,#f2f2f2 100%);
+	background: linear-gradient(to bottom,#FFF 0,#F2F2F2 100%);
+	border: 1px solid #CCC;
+	border-radius: 3.01px;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	color: #333;
+	cursor: pointer;
+	display: inline-block;
+	font-family: inherit;
+	font-size: 10px;
+	font-variant: normal;
+	font-weight: normal;
+	height: 2.1428571428571em;
+	line-height: 1.42857142857143;
+	margin: 0;
+	padding: 4px 5px;
+	text-decoration: none;
+	text-shadow: 0 1px 0 #FFF;
+	vertical-align: baseline;
+	white-space: nowrap;
+	}
