@@ -8,23 +8,25 @@
 }
 
 .options{
-	background-color: #E9E9E9;
-	border: none;
+	background-color: #F0F0F0;
+	border: 1px solid #CCC;
 	border-bottom-left-radius: 4px;
 	border-bottom-right-radius: 4px;
-	width: 32px;
+	width: 72px;
 	padding: 3px;
 	border-top: none;
 	float: right;
-	margin-right: 20px;
+	margin-right: 22px;
 	display: none;
-	padding-bottom: 0px;
-	padding-top: 0;
+	padding-bottom: 3px;
+	padding-top: 3px;
+	box-shadow: 0 3px 6px rgba(111, 111, 111, 0.2);
 }
 
 div[contenteditable]{
 	padding-top: 3px;
 	padding-right: 3px;
+	height: 20px;
 }
 
 .glyphicon-question-sign{
@@ -72,4 +74,11 @@ to {-o-transform: rotate(359deg);}
 @keyframes rotation {
 from {transform: rotate(0deg);}
 to {transform: rotate(359deg);}
+}
+
+#editicon{
+	background-color: #F0F0F0;
+	width: 20px;
+	height: 20px;
+	padding: 2px;
 }

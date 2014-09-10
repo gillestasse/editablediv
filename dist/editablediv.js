@@ -2,12 +2,12 @@
 
     $.fn.editablediv = function(options) {
 
-        html='<div style="width:150px;display:inline-flex">\
-        <div contenteditable="true" style="border:1px solid #rgba(0,0,0,0);width:150px" class="editable-div"></div>\
-        <span class="glyphicon glyphicon-question-sign" style="top:0" id="help"></span></div>\
+        html='<div style="width:128px;display:inline-flex">\
+        <div contenteditable="true" style="border:1px solid #DEDEDE;width:150px" class="editable-div"></div>\
+        <span class="glyphicon glyphicon-pencil" style="top:0" id="editicon"></span></div>\
         <div class="options">\
-        <span class="glyphicon glyphicon-remove closeoptions" style="border-right:1px solid black;padding-right:4px;"></span>\
-        <span class="glyphicon glyphicon-ok saveoptions" ></span>\
+       <button><span class="glyphicon glyphicon-remove closeoptions"></span></button>\
+        <button><span class="glyphicon glyphicon-ok saveoptions" ></span></button>\
         </div>'
 
         if(options.html){
@@ -18,17 +18,20 @@
 
         setTimeout(function() {
             $(element).find('div[contenteditable]').html(options.val)
+            $(this).find('div[contenteditable]').css('border','1px solid #dedede')
         }, 10);
 
         var element=this
         var old_value
 
         element.on('mouseenter',function(){
-            $(this).find('div[contenteditable]').css('border','1px dotted #428bca')
+            $(this).find('div[contenteditable]').css('border','1px solid #428bca')
+             $(this).find('.glyphicon-pencil').show()
         })
 
         element.on('mouseleave',function(){
-            $(this).find('div[contenteditable]').css('border','white')
+             $(this).find('div[contenteditable]').css('border','1px solid #dedede')
+             $(this).find('.glyphicon-pencil').hide()
         })
 
         $(element).find('div[contenteditable]').on('focus',function(){
@@ -56,10 +59,12 @@
             }, 100);
         })
 
+
          $(element).find('.saveoptions').on('click',function(){
+            
             $(element).find('.options').css('display','none')
-            $(element).find('#help').removeClass("glyphicon-question-sign")
-            $(element).find('#help').addClass("spinner")
+            $(element).find('#editicon').removeClass("glyphicon-pencil")
+            $(element).find('#editicon').addClass("spinner")
 
             element._input.trigger('saving', {value:element._input.html()} );
 
@@ -72,8 +77,8 @@
          }
 
          this.done_loading=function(){
-            $(element).find('#help').removeClass("spinner")
-            $(element).find('#help').addClass("glyphicon-question-sign")          
+            $(element).find('#editicon').removeClass("spinner")
+            $(element).find('#editicon').addClass("glyphicon-pencil")          
          }
 
          function getinput(){

@@ -22,7 +22,14 @@ $(document).ready(
 
 	function(){
 
-		var myplung=$(".editable-textarea").editablediv({actions:function(){console.info('lllllllllllll')}})
+		var myplung=
+		$(".editable-textarea").editablediv(
+			{	val:"gilles",
+				actions:function(){console.info('lllllllllllll')}
+		})
+		
+
+
 		myplung.on('custom',function(evt, myData) {console.info(myData)})
 		//myplung.disable()
 
