@@ -43,7 +43,6 @@
         })
 
         $('.closeoptions').on('click',function(){
-            console.info('kkkkkk')
             element._input.html(old_value)
             $(element).find('.options').css('display','none')
         })
@@ -57,9 +56,10 @@
             });
 
             setTimeout(function() {
-
+                 console.info('ooooo')
                $('body').off('click')
-                $(element).find('.options').css('display','block')
+                $(element).find('.options').css('display','none')
+                  element._input.html(old_value)
 
             }, 10);
         })
