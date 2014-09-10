@@ -47,7 +47,7 @@
             $(element).find('.options').css('display','none')
         })
 
-        $(this).on('focusout',function(){
+/*        $(this).on('focusout',function(){
 
             $('body').click(function(e){
                 if(!$(e.target).hasClass('saveoptions')){
@@ -56,13 +56,12 @@
             });
 
             setTimeout(function() {
-                 console.info('ooooo')
+
                $('body').off('click')
-                $(element).find('.options').css('display','none')
-                  element._input.html(old_value)
+                $(element).find('.options').css('display','block')
 
             }, 10);
-        })
+        })*/
 
         $(element).find('.saveoptions').show()
 
