@@ -3,7 +3,6 @@
 
     $.fn.editablediv = function(options) {
 
-
         html='<div style="width:150px;display:inline-flex">\
         <div contenteditable="true" style="border:1px solid #DEDEDE;width:150px" class="editable-div"></div>\
         <span class="glyphicon glyphicon-question-sign" style="top:0" id="help"></span></div>\
