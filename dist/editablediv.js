@@ -1,6 +1,5 @@
 (function($) {
 
-
     $.fn.editablediv = function(options) {
 
         html='<div style="width:150px;display:inline-flex">\
@@ -11,28 +10,52 @@
         <span class="glyphicon glyphicon-ok saveoptions" ></span>\
         </div>'
 
-         $(this).html(html)
+        if(options.html){
+            html = options.html
+        }
 
-         setTimeout(function() {
+        $(this).html(html)
+
+        setTimeout(function() {
             $(element).find('div[contenteditable]').html(options.val)
-         }, 10);
+        }, 10);
 
-         var element=this
+        var element=this
+        var old_value
 
-     
+        element.on('mouseenter',function(){
+            $(this).find('div[contenteditable]').css('border','1px dotted #428bca')
+        })
+
+        element.on('mouseleave',function(){
+            $(this).find('div[contenteditable]').css('border','white')
+        })
+
         $(element).find('div[contenteditable]').on('focus',function(){
             setTimeout(function() {$(element).find('.options').css('display','block')}, 10);
             element._input=$(this)
+            old_value = element._input.html()
         })
-
 
         $('.closeoptions').on('click',function(){
+            element._input.html(old_value)
             $(element).find('.options').css('display','none')
         })
 
-/*        $(this).on('focusout',function(){
-            $(element).find('.options').css('display','none')
-        })*/
+        $(this).on('focusout',function(){
+
+            $('body').click(function(e){
+                if(!$(e.target).hasClass('saveoptions')){
+                    element._input.html(old_value)
+                }
+            });
+
+            setTimeout(function() {
+                $(element).find('.options').css('display','none')
+                $('body').off('click')
+            }, 100);
+        })
+
 
          $(element).find('.saveoptions').on('click',function(){
             $(element).find('.options').css('display','none')
