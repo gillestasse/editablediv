@@ -25,12 +25,15 @@ $(document).ready(
 		var myplung=
 		$(".editable-textarea").editablediv(
 			{	val:"gilles",
-				actions:function(){console.info('lllllllllllll')}
+				component:"<select style='width:100%'><option value='1'>test</option><option value='2'>test2</option></select>",
+				actions:function(){console.info('lllllllllllll')
+
+			}
 		})
 		
 
 
-		myplung.on('custom',function(evt, myData) {console.info(myData)})
+		myplung.on('saving',function(evt, myData) {console.info(myData)})
 		//myplung.disable()
 
 	})

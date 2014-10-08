@@ -3,7 +3,7 @@
     $.fn.editablediv = function(options) {
 
 
-        html='<div style="width:128px;display:inline-flex">\
+        html='<div style="width:128px;display:inline-flex" id="editablediv">\
         <div contenteditable="true" style="border:1px solid #DEDEDE;width:150px" class="editable-div"></div>\
         <span class="glyphicon glyphicon-pencil" style="top:0" id="editicon"></span></div>\
         <div class="options">\
@@ -37,36 +37,38 @@
         })
 
         $(element).find('div[contenteditable]').on('focus',function(){
+           
             setTimeout(function() {$(element).find('.options').css('display','block')}, 10);
             element._input=$(this)
             old_value = element._input.html()
+
+            if(options.component){
+                $(element).find('div[contenteditable]').css("padding",0)
+                $(element).find('div[contenteditable]').html(options.component)
+            }
         })
 
         $('.closeoptions').on('click',function(){
-            element._input.html(old_value)
+            $(element).find('div[contenteditable]').html(old_value)
             $(element).find('.options').css('display','none')
         })
 
-/*        $(this).on('focusout',function(){
+        $(document).on('click',function(e){
 
-            $('body').click(function(e){
-                if(!$(e.target).hasClass('saveoptions')){
-                    element._input.html(old_value)
-                }
-            });
+            if($(e.target).closest("#editablediv").length==0){
+                $(element).find('div[contenteditable]').html(old_value)
+                $(element).find('.options').css('display','none')                
+            }
 
-            setTimeout(function() {
+        })
 
-               $('body').off('click')
-                $(element).find('.options').css('display','block')
 
-            }, 10);
-        })*/
 
         $(element).find('.saveoptions').show()
 
-
          $(element).find('.saveoptions').on('click',function(){
+
+             event.stopPropagation();
             
             $(element).find('.options').css('display','none')
             $(element).find('#editicon').removeClass("glyphicon-pencil")
